@@ -27,6 +27,7 @@ def find_max_profit(prices):
   largest_gain = 0 
   start_sub = 1
   saved_val = []
+
   for i in range(0, len(prices) - 1):
     for j in range(start_sub, len(prices)):
       current_difference = -prices[i] + prices[j]
@@ -37,6 +38,7 @@ def find_max_profit(prices):
       else:
         pass
     start_sub +=1
+
     print(saved_val)
     if largest_gain == 0:
       largest_gain = saved_val[0]
@@ -49,7 +51,7 @@ def find_max_profit(prices):
       pass
   return largest_gain
 
-sample = [100, 90, 80, 50, 20, 10]
+sample = [100, 55, 4, 98, 10, 18, 90, 95, 43, 11, 47, 67, 89, 42, 49, 79]
 print(find_max_profit(sample))
 
 if __name__ == '__main__':
