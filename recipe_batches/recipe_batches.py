@@ -32,16 +32,11 @@ def recipe_batches(recipe, ingredients):
   for k in recipe:
     if k in ingredients:
       divided.append(ingredients[k]//recipe[k])
-      print(k)
-      print(divided)
     else:
       divided.append(0)
-      print()
 
-  print(divided)
   
   batches = min(divided)
-  print(batches)
 
   return batches
 
